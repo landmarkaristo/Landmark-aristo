@@ -60,10 +60,10 @@ export function EnquiryModal() {
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="relative w-full max-w-lg bg-bg-cream rounded-2xl shadow-2xl overflow-hidden border border-accent/20"
+            className="relative w-full max-w-lg max-h-[85vh] flex flex-col bg-bg-cream rounded-2xl shadow-2xl border border-accent/20"
           >
             {/* Header */}
-            <div className="bg-primary p-6 text-white flex items-center justify-between">
+            <div className="bg-primary p-6 text-white flex items-center justify-between shrink-0 rounded-t-2xl">
               <div>
                 <h3 className="text-2xl font-heading mb-1">Get an Exclusive Viewing</h3>
                 <p className="text-white/70 text-sm italic">Unlock floor plans and premium details</p>
@@ -76,7 +76,7 @@ export function EnquiryModal() {
               </button>
             </div>
 
-            <div className="p-8">
+            <div className="p-5 sm:p-8 overflow-y-auto">
               {status === "success" ? (
                 <div className="py-12 flex flex-col items-center text-center animate-fade-in">
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-6">
@@ -92,7 +92,7 @@ export function EnquiryModal() {
                     <input
                       required
                       type="text"
-                      placeholder="e.g. Alexander Pierce"
+                      placeholder="e.g. Rahul Sharma"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full bg-white text-black border border-primary/10 rounded-lg px-4 py-3 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-premium"
@@ -104,7 +104,7 @@ export function EnquiryModal() {
                       <input
                         required
                         type="tel"
-                        placeholder="+1-234-567-890"
+                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full bg-white text-black border border-primary/10 rounded-lg px-4 py-3 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-premium"
@@ -115,7 +115,7 @@ export function EnquiryModal() {
                       <input
                         required
                         type="email"
-                        placeholder="alexander@prestige.com"
+                        placeholder="rahulsharma@gmail.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full bg-white text-black border border-primary/10 rounded-lg px-4 py-3 focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-premium"

@@ -4,9 +4,12 @@
   --color-primary: var(--primary);
   --color-accent: var(--accent);
   --color-bg-cream: var(--bg-cream);
-  
+
   --font-heading: var(--font-playfair);
   --font-body: var(--font-inter);
+
+  /* ✅ Added Cormorant font */
+  --font-cormorant: var(--font-cormorant);
 
   --radius-lg: 12px;
   --radius-xl: 20px;
@@ -15,17 +18,39 @@
   --animate-slide-up: slide-up 0.5s ease-out;
 
   @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
+
   @keyframes slide-up {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
+
   @keyframes border-shimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
 
@@ -33,7 +58,7 @@
   --primary: #2D3628;
   --accent: #C5A059;
   --bg-cream: #FBF8E9;
-  
+
   --foreground: #1a1a1a;
   --background: var(--bg-cream);
 }
@@ -42,10 +67,17 @@
   * {
     @apply border-primary/10;
   }
+
   body {
     @apply bg-bg-cream text-foreground font-body antialiased selection:bg-accent selection:text-white;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading tracking-tight;
   }
 }
@@ -61,6 +93,11 @@
 
   .text-luxury-gradient {
     @apply bg-clip-text text-transparent bg-linear-to-r from-accent via-[#D9B273] to-accent;
+  }
+
+  /* ✅ Added utility class for selective usage */
+  .font-cormorant {
+    font-family: var(--font-cormorant), serif !important;
   }
 }
 

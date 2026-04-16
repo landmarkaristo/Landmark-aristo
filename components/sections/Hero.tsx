@@ -99,7 +99,7 @@ export function Hero() {
                 variants={letterVariants}
                 initial="hidden"
                 animate="visible"
-                className="text-white/90 font-black leading-none"
+                className="text-white/90 font-black font-cormorant leading-none"
                 style={{
                   fontSize: "clamp(1.8rem, 4.5vw, 3.5rem)",
                   display: "inline-block",
@@ -121,7 +121,7 @@ export function Hero() {
                 variants={letterVariants}
                 initial="hidden"
                 animate="visible"
-                className="font-black leading-none"
+                className="font-black font-cormorant leading-none"
                 style={{
                   fontSize: "clamp(3.2rem, 8.5vw, 6rem)",
                   display: "inline-block",

@@ -47,7 +47,7 @@ export function FloorPlans() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl lg:text-6xl text-primary mb-6 font-heading"
+              className="text-4xl md:text-5xl lg:text-6xl text-primary mb-6 font-cormorant"
             >
               Space <span className="text-secondary">Redefined</span>
             </motion.h2>

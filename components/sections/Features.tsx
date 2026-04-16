@@ -80,7 +80,7 @@ export function Features() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl lg:text-6xl text-primary mb-16 font-heading"
+            className="text-4xl md:text-5xl lg:text-6xl text-primary mb-16 !font-cormorant"
           >
             Internal <span className="text-secondary">Features</span>
           </motion.h2>
@@ -117,12 +117,12 @@ export function Features() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl text-primary mb-12 font-heading"
+            className="text-3xl md:text-4xl text-primary mb-12 font-heading font-cormorant"
           >
             Security <span className="text-secondary">Protocols</span>
           </motion.h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-y-10 gap-x-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-y-10 gap-x-4 sm:gap-x-8">
             {securityFeatures.map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -130,12 +130,12 @@ export function Features() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="flex flex-col items-center text-center gap-4 group max-w-[130px] mx-auto"
+                className="flex flex-col items-center text-center gap-3 sm:gap-4 group w-full max-w-[140px] mx-auto"
               >
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg shadow-primary/5 group-hover:bg-accent group-hover:text-white transition-premium">
-                  <feature.icon className="w-8 h-8 text-accent group-hover:text-white transition-premium" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg shadow-primary/5 group-hover:bg-accent group-hover:text-white transition-premium shrink-0">
+                  <feature.icon className="w-7 h-7 sm:w-8 sm:h-8 text-accent group-hover:text-white transition-premium" />
                 </div>
-                <span className="text-primary/80 font-medium text-[12px] uppercase tracking-wide leading-relaxed text-center">
+                <span className="text-primary/80 font-medium text-[10px] sm:text-[12px] uppercase tracking-wide leading-snug sm:leading-relaxed text-center w-full break-words px-1">
                   {feature.name}
                 </span>
               </motion.div>

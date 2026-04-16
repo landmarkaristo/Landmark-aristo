@@ -30,70 +30,61 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-premium",
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
-      )}
-    >
-      <div className="container-custom flex items-center justify-between">
-        {/* Logo */}
-        {/* <Link href="/images/golden-logo.png" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg group-hover:bg-accent transition-premium">
-            <span className="text-white font-heading font-bold text-xl">L</span>
+    <>
+      <nav
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-premium",
+          scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        )}
+      >
+        <div className="container-custom flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/images/golden-logo.png"
+              alt="Landmark Aristo Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
+            <span className="font-heading font-bold text-xl tracking-tight text-accent">
+              Landmark Aristo
+            </span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "font-bold transition-premium text-sm uppercase tracking-wider hover:text-accent",
+                  scrolled ? "text-primary/80" : "text-white/90 drop-shadow-sm"
+                )}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Button onClick={openModal} variant="premium-outline" size="sm" className="ml-4">
+              Enquiry
+            </Button>
           </div>
-          <span className={cn(
-            "font-heading font-bold text-xl tracking-tight transition-premium",
-            scrolled ? "text-primary" : "text-primary"
-          )}>
-            Landmark Aristo
-          </span>
-        </Link> */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <Image
-            src="/images/golden-logo.png"
-            alt="Landmark Aristo Logo"
-            width={40}
-            height={40}
-            className="rounded-lg"
-          />
-          <span className="font-heading font-bold text-xl tracking-tight text-accent">
-            Landmark Aristo
-          </span>
-        </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                "font-bold transition-premium text-sm uppercase tracking-wider hover:text-accent",
-                scrolled ? "text-primary/80" : "text-white/90 drop-shadow-sm"
-              )}
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Button onClick={openModal} variant="premium-outline" size="sm" className="ml-4">
-            Enquiry
-          </Button>
+          {/* Mobile Toggle */}
+          <button
+            className={cn(
+              "md:hidden transition-colors",
+              scrolled ? "text-primary" : "text-white"
+            )}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+          </button>
         </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className={cn(
-            "md:hidden transition-colors",
-            scrolled ? "text-primary" : "text-white"
-          )}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-        </button>
-      </div>
+      </nav>
 
       {/* Mobile Menu Side Drawer */}
+      {/* Moved outside nav to prevent backdrop-blur containing block issue */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
@@ -112,7 +103,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed inset-y-0 right-0 w-[85vw] max-w-sm z-[52] shadow-2xl p-8 flex flex-col border-l border-accent/20 bg-[#2D3628]"
+              className="fixed inset-y-0 right-0 w-[85vw] max-w-sm z-[52] shadow-2xl p-8 flex flex-col border-l border-accent/20 bg-[#2D3628] overflow-y-auto"
             >
               <div className="flex items-center justify-between mb-16">
                 <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
@@ -147,7 +138,7 @@ export function Navbar() {
                 <Button 
                   onClick={() => { setMobileMenuOpen(false); openModal(); }} 
                   variant="premium-outline"
-                  className="w-full py-6 text-xl border-accent/50 text-accent"
+                  className="w-full py-6 text-xl border-accent/50 text-accent mt-10"
                 >
                   Enquiry
                 </Button>
@@ -159,6 +150,6 @@ export function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 }

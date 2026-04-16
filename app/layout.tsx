@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -13,6 +13,14 @@ const playfair = Playfair_Display({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+/* ✅ Added Cormorant */
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -83,6 +91,7 @@ export default function RootLayout({
         className={cn(
           inter.variable,
           playfair.variable,
+          cormorant.variable, // ✅ Added here
           "min-h-screen bg-bg-cream font-body antialiased"
         )}
       >

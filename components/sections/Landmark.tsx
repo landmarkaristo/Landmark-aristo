@@ -26,12 +26,20 @@ export function Landmark() {
             className="relative"
           >
             <div className="relative aspect-[4/4] overflow-hidden rounded-2xl shadow-2xl">
-              <Image
-                src="/images/aboutus.jpg" // User to replace
-                alt="Landmark Aristo Luxury Interior"
-                fill
-                className="object-cover"
-              />
+              <motion.div
+                initial={{ scale: 1, opacity: 0 }}
+                whileInView={{ scale: 1.15, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 5, ease: "easeOut" }}
+                className="w-full h-full relative"
+              >
+                <Image
+                  src="/images/aboutus.jpg" // User to replace
+                  alt="Landmark Aristo Luxury Interior"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
             </div>
             {/* Decorative Elements */}
             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-accent/20 rounded-2xl -z-10" />
@@ -46,7 +54,7 @@ export function Landmark() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-accent font-bold uppercase tracking-[0.4em] text-xs mb-4">Our Integrity</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl text-primary mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl text-primary mb-8 leading-tight font-cormorant">
               A Landmark of <span className="text-secondary">Sophistication</span>
             </h2>
             <div className="space-y-6 text-primary/70 mb-10 leading-relaxed">

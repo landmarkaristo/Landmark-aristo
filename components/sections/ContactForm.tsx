@@ -72,7 +72,7 @@ export function ContactForm() {
                 <input
                   required
                   type="text"
-                  placeholder="e.g. Maximilian Ross"
+                  placeholder="e.g. Rahul Sharma"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-accent outline-none transition-premium"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -83,7 +83,7 @@ export function ContactForm() {
                 <input
                   required
                   type="tel"
-                  placeholder="+1-555-000-0000"
+                  placeholder="+91 98765 43210"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-accent outline-none transition-premium"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -94,7 +94,7 @@ export function ContactForm() {
                 <input
                   required
                   type="email"
-                  placeholder="maximilian@example.com"
+                  placeholder="rahulsharma@gmail.com"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-accent outline-none transition-premium"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}

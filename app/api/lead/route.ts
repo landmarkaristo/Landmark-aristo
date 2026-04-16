@@ -10,7 +10,6 @@ export async function POST(req: Request) {
     }
 
     // PASTE YOUR GOOGLE SHEET WEB APP URL BELOW
-    // Replace the empty string "" with your actual URL from Step 5 of the instructions
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyp94vNiYyccZFs6LSKoI7nB0FmytdEaCjQqVvO6ejwU1ZMlzp7EOySOsKxPH0-60of/exec";
 
     if (!GOOGLE_SCRIPT_URL) {
