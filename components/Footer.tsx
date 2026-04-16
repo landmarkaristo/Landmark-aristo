@@ -56,7 +56,7 @@ export function Footer() {
                 <FaFacebookF className="w-5 h-5" />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/landmark_aristo?igsh=MXNmMXVyODlzaDlyZw=="
                 target="_blank"
                 className="p-2.5 bg-primary/5 text-primary/70 hover:bg-accent hover:text-white rounded-xl transition-premium shadow-sm"
               >

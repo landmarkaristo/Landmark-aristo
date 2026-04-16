@@ -129,9 +129,9 @@ export function Amenities() {
         {/* Visual Highlights (As requested by user) */}
         {/* Visual Highlights (Marquee Carousels) */}
         <div className="flex flex-col gap-6 relative w-full overflow-hidden">
-          <MarqueeRow items={[...actualImages]} direction="left" speed={45} />
-          <MarqueeRow items={[...actualImages].reverse()} direction="right" speed={50} />
-          <MarqueeRow items={[...actualImages.slice(5), ...actualImages.slice(0, 5)]} direction="left" speed={40} />
+          <MarqueeRow items={[...actualImages]} direction="left" speed={120} />
+          <MarqueeRow items={[...actualImages].reverse()} direction="right" speed={120} />
+          <MarqueeRow items={[...actualImages.slice(5), ...actualImages.slice(0, 5)]} direction="left" speed={120} />
         </div>
       </div>
     </section>
