@@ -49,7 +49,7 @@ export function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-end">
 
-      {/* Background — object-right pushes building to right so text on left stays clear */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <motion.div
           className="w-full h-full"
@@ -57,26 +57,38 @@ export function Hero() {
           animate={{ scale: 1 }}
           transition={{ duration: 9, ease: "easeOut" }}
         >
+          {/* Desktop Image */}
           <Image
             src="/images/hero-building.jpg"
             alt="Landmark Aristo — Premium Residences in Kalyan East"
             fill
             priority
-            className="object-cover object-right"
+            className="object-cover object-right hidden md:block"
+          />
+
+          {/* Mobile Image */}
+          <Image
+            src="/images/hero-banner-mob.jpg"
+            alt="Landmark Aristo — Premium Residences in Kalyan East"
+            fill
+            priority
+            className="object-cover object-center block md:hidden"
           />
         </motion.div>
 
-        {/* Left-heavy gradient keeps text legible without covering the building */}
+        {/* Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
       </div>
 
-      {/* Content — anchored to bottom-left on desktop, bottom-center on mobile */}
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 pb-12 md:pb-16 lg:pb-20">
+      {/* Content */}
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 pb-20 md:pb-16 lg:pb-20">
         <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
 
-          {/* H1 Branding for SEO */}
-          <h1 className="sr-only">Landmark Aristo — 1 & 2 BHK Premium Homes in Kalyan East</h1>
+          {/* H1 for SEO */}
+          <h1 className="sr-only">
+            Landmark Aristo — 1 & 2 BHK Premium Homes in Kalyan East
+          </h1>
 
           {/* LANDMARK */}
           <div className="flex overflow-hidden" aria-hidden="true">
@@ -100,7 +112,7 @@ export function Hero() {
             ))}
           </div>
 
-          {/* ARISTO — gold */}
+          {/* ARISTO */}
           <div className="flex overflow-hidden -mt-1">
             {HEADING.split("").map((char, i) => (
               <motion.span
@@ -122,7 +134,7 @@ export function Hero() {
             ))}
           </div>
 
-          {/* Gold animated rule */}
+          {/* Gold Line */}
           <GoldLine />
 
           {/* Tagline */}
@@ -136,7 +148,7 @@ export function Hero() {
             Rooftop amenities, grand lobby, and a life crafted with timeless elegance.
           </motion.p>
 
-          {/* CTAs — compact */}
+          {/* CTA */}
           <motion.div
             variants={fadeUp(1.2)}
             initial="hidden"
@@ -150,6 +162,7 @@ export function Hero() {
             >
               Explore Floor Plans
             </button>
+
             <button
               onClick={openModal}
               className="px-4 py-2 text-xs font-semibold tracking-wide text-white rounded-md border border-white/40 hover:border-white hover:bg-white/10 cursor-pointer flex items-center gap-1 transition-colors"
