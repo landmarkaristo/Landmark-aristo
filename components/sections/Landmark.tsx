@@ -59,10 +59,10 @@ export function Landmark() {
             </h2>
             <div className="space-y-6 text-primary/70 mb-10 leading-relaxed">
               <p>
-                Strategically placed in the thriving heart of Kalyan East, Landmark Aristo is more than a residence — it is a statement of refined living. Designed by Space Enviro Architects, every corner reflects precision, purpose and timeless elegance.
+                Strategically located in the thriving heart of Kalyan East, Landmark Aristo is more than a residence — it is a statement of refined living. Designed by Space Enviro Architects, every corner reflects precision, purpose, and timeless elegance.
               </p>
               <p>
-                From the grand entrance lobby to the rooftop sky amenities, Landmark Aristo delivers a life where comfort meets class — across thoughtfully crafted 1 & 2 BHK premium homes.
+                From the grand entrance lobby to the rooftop sky amenities, Landmark Aristo delivers a lifestyle where comfort meets class — through thoughtfully crafted 1 & 2 BHK premium balcony homes.
               </p>
             </div>
 

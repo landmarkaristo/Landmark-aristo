@@ -87,7 +87,7 @@ export function Hero() {
 
           {/* H1 for SEO */}
           <h1 className="sr-only">
-            Landmark Aristo — 1 & 2 BHK Premium Homes in Kalyan East
+            Landmark Aristo — 1 & 2 BHK premium balcony homes
           </h1>
 
           {/* LANDMARK */}
@@ -144,8 +144,8 @@ export function Hero() {
             animate="visible"
             className="text-white/70 text-sm md:text-base leading-relaxed font-light mb-7 max-w-sm md:max-w-md"
           >
-            1 &amp; 2 BHK Premium Homes in the thriving heart of Kalyan East.
-            Rooftop amenities, grand lobby, and a life crafted with timeless elegance.
+            1 &amp; 2 BHK premium balcony homes <br />
+            Rooftop Clubhouse and amenities
           </motion.p>
 
           {/* CTA */}

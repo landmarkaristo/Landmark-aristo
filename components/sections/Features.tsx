@@ -18,7 +18,7 @@ const internalFeatures = [
     title: "Living Room",
     items: [
       "Vitrified Tile Flooring",
-      "Acrylic Emulsion Paint for Internal Ceiling & Walls",
+      "Acrylic Emulsion Paint for Internal Walls & Ceiling",
       "Concealed Conduits with Copper Wiring",
       "Modular Switches",
       "Teakwood Frame Doors with Designer Shutters",
@@ -28,9 +28,9 @@ const internalFeatures = [
     title: "Bathroom",
     items: [
       "Vitrified Tile Flooring",
-      "Finest Quality Fitting and Sanitary Ware",
-      "CP Fitting",
-      "Hot & Cold Diverters for all Showers",
+      "Finest Quality Fittings and Sanitary Ware",
+      "CP Fittings",
+      "Hot & Cold Diverters for All Showers",
     ],
   },
   {
@@ -43,7 +43,7 @@ const internalFeatures = [
     ],
   },
   {
-    title: "Bed Room",
+    title: "Bedroom",
     items: [
       "Vitrified Tile Flooring",
       "Concealed Conduits with Copper Wiring",
@@ -54,7 +54,7 @@ const internalFeatures = [
 const securityFeatures = [
   { name: "Earthquake Resistant Structure", icon: ShieldCheck },
   { name: "Integrated Fire Protection Systems", icon: Flame },
-  { name: "Premium Elevators (Schindler/OTIS/Kone)", icon: Building2 },
+  { name: "Premium Elevators", icon: Building2 },
   { name: "Refuge Area", icon: Layers },
   { name: "Best in Class Amenities", icon: Star },
   { name: "Club House", icon: Home },
